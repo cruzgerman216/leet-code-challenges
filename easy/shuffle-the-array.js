@@ -1,4 +1,3 @@
-
 var shuffle = function(nums = [2,5,1,3,4,7], n = 3) {
     // [x] divide the array in half 
     // [x] loop through half the length of the nums array 
