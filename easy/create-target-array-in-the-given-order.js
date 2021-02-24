@@ -5,5 +5,3 @@ var createTargetArray = function(nums = [0,1,2,3,4], index = [0,1,2,2,1]) {
     }
     return arr;
 };
-
-createTargetArray();
