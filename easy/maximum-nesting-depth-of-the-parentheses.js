@@ -10,7 +10,6 @@ var maxDepth = function(s = "(1+(2*3)+()(/84))+1") {
             count--;
         }
     }
-
     return depth;
 
 };
