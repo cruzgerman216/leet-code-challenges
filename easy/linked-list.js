@@ -94,6 +94,15 @@ class LinkedList {
         }
     }
 
+    printReverse(current = this.head){
+        if(current == null){
+            return;
+        }
+
+        this.printReverse(current.next);
+        console.log(current.data);
+    }
+
     printListData(){
         let current = this.head;
         while(current){
@@ -118,3 +127,5 @@ console.log("----");
 
 ll.removeAt(1);
 ll.printListData();
+console.log("----reverse---")
+ll.printReverse();
