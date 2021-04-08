@@ -80,6 +80,7 @@ class LinkedList {
         }else{
             if(index == 0){
                 this.head = this.head.next;
+                this.size--;
                 return;
             }
             let i = 0;
@@ -90,6 +91,7 @@ class LinkedList {
                 i++;
                 current = current.next;
             }
+            this.size--;
             prev.next = current.next;
         }
     }
