@@ -1,6 +1,10 @@
 var getDecimalValue = function(head) {
-    let binary = head.join("");
-    return parseInt(binary,2)
-};
+    let str = "";
+    let current = head;
 
-console.log(getDecimalValue([1,0,1]))
+    while(current){
+        str += current.val;
+        current = current.next
+    }
+    return parseInt(str,2)
+};
