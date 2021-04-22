@@ -13,6 +13,3 @@ var minOperations = function(nums = [1,1,1]) {
 
 
 console.log(minOperations())
-// 1 5 6 7 8
-
-// 4 3 14
