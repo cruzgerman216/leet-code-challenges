@@ -1,4 +1,4 @@
-// arr = positive numbers
+// arr = positive nums
 // goal: any two values of the indexes to add up to target
 // return value will be any two indexes
 
@@ -16,14 +16,29 @@ function twoSum(arr=[1,2,3], target = 4){
     }
 }
 
-function twoSum(numbers, target) {
+function twoSum(nums, target) {
     let numDict = {}
-    for (let i = 0; i < numbers.length; i++) {
-      let targetDiff = target - numbers[i]
+    for (let i = 0; i < nums.length; i++) {
+      let targetDiff = target - nums[i]
       if (numDict[targetDiff] || numDict[targetDiff] == 0) {
         return [numDict[targetDiff], i]
       }
-      numDict[numbers[i]] = i
+      numDict[nums[i]] = i
     }
-    console.log(numDict)
   }
+
+  const twoSum = (nums, target) => {
+    const map = {};
+  
+    for (let i = 0; i < nums.length; i++) {
+      const another = target - nums[i];
+  
+      if (another in map) {
+        return [map[another], i];
+      }
+  
+      map[nums[i]] = i;
+    }
+  
+    return null;
+  };
