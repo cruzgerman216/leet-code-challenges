@@ -3,6 +3,7 @@
 // if X or V are after I, subtract,
 // or you can check IX and IV
 
+// solution # 1
 var romanToInt = function (s = "IV") {
   let sum = 0;
   let rm = {
@@ -27,3 +28,6 @@ var romanToInt = function (s = "IV") {
 };
 
 romanToInt();
+
+// Solution #2
+
