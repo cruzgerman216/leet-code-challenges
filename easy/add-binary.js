@@ -11,16 +11,10 @@ var addBinary = function (a = "0", b = "0") {
   let i = a.length - 1;
   let j = b.length - 1;
   let carry = 0;
-  let num1, num2;
   let binaryString = [];
   let sum = 0;
   while (i >= 0 || j >= 0 || carry == 1) {
-    // check if more than 2 and if both numbesrs exist
-    // true -> carry = 1 have the sum module by 2
-    // false -> add the sum
-    a[i] ? (num1 = +a[i]) : (num1 = 0);
-    b[j] ? (num2 = +b[j]) : (num2 = 0);
-    sum = num1 + num2 + carry;
+    sum = (+a[i] || 0) + +b[j] + carry;
     binaryString.unshift(sum % 2);
     sum >= 2 ? (carry = 1) : (carry = 0);
     i--;
