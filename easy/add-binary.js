@@ -7,24 +7,22 @@
 // check if an index is less than 0, if so then carry onto the rest of the string
 // javascript method or iterate and add the rest of the string that's left over
 // if positions i = 0 and j = 0 and carry = 1
-var addBinary = function (a = "1111", b = "1111") {
+var addBinary = function (a = "0", b = "0") {
   let i = a.length - 1;
   let j = b.length - 1;
   let carry = 0;
+  let num1, num2;
   let binaryString = [];
   let sum = 0;
   while (i >= 0 || j >= 0 || carry == 1) {
-    if (a[i] && b[j]) {
-      sum = (+a[i] + +b[j] + carry);
-    } else if (!a[i] && b[j]) {
-      sum = (+b[j] +carry);
-    } else if (!b[j] && a[i]) { 
-      sum = (+a[i] +carry);
-    }else{
-      sum = carry;
-    }
-    binaryString.unshift(sum %2);
-    sum == 2 || sum == 3 ? (carry = 1) : (carry = 0);
+    // check if more than 2 and if both numbesrs exist
+    // true -> carry = 1 have the sum module by 2
+    // false -> add the sum
+    a[i] ? (num1 = +a[i]) : (num1 = 0);
+    b[j] ? (num2 = +b[j]) : (num2 = 0);
+    sum = num1 + num2 + carry;
+    binaryString.unshift(sum % 2);
+    sum >= 2 ? (carry = 1) : (carry = 0);
     i--;
     j--;
     sum = 0;
